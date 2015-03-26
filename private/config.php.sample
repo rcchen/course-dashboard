@@ -1,0 +1,32 @@
+<?
+
+// Course information
+$COURSE_NAME = "######";
+$COURSE_SEASON = "######";
+$COURSE_YEAR = "####";
+
+// The application name for the app that you registered in Google Developer console
+$APP_NAME = "#####";
+
+// Your service account name should end in @developer.gserviceaccount.com
+// Be sure that you are sharing your Google Sheet to this service account
+$SERVICE_ACCOUNT_NAME = "#####@developer.gserviceaccount.com";
+
+// You should have bee provided with a private key; rename to cert.p12 and place in the /private directory
+$KEY_FILE_LOCATION = "./private/cert.p12";
+
+// The name of the spreadsheet you shared to your service account
+$SPREADSHEET_TITLE = "#########";
+
+// The titles of the worksheets you want to include in the grade report
+// Each worksheet should correspond to a single assignment/project/exam score
+$WORKSHEET_TITLES = ["###", "###", "###", "###"];
+
+// The denominator for each of the assignments/projects/exams
+$WORKSHEET_TOTALS = [60, 40, 50, 30];
+
+// Allows you to set a test user when testing, and otherwise switching to the WebAuth authenticated user
+$STUDENT_EMAIL = $dev_mode ? "testuser@stanford.edu" : $_ENV["WEBAUTH_LDAP_MAIL"];
+$STUDENT_NAME = $dev_mode ? "Test User" : $_ENV["WEBAUTH_LDAP_DISPLAYNAME"];
+
+?>
